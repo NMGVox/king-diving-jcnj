@@ -1,0 +1,32 @@
+body, html {
+	margin:0;
+	padding:0;
+	position:relative;
+	overflow: visible;
+}
+
+.heading {
+	background-color: darkred;
+	position:sticky;
+	top:0%;
+}
+
+.toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	margin:0;
+	color:white;
+	font-weight: 700;
+	justify-content: center;
+	z-index: 1;
+}
+
+li {
+	padding: 1%;
+	list-style-type: none;
+	font-size: 1.25rem;
+}
+
+.home {
+	padding-bottom: 150vh;
+}
