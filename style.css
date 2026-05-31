@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --main-color: rgb(10, 37, 73);
+    --main-color-light: rgb(22, 79, 155);
     --main-color-variant: rgba(0, 33, 77, 0.521);
+    --default-text:white;
+    --invert-text:black;
 }
 
 body, html {
@@ -9,69 +15,151 @@ body, html {
 	position:relative;
 	overflow: visible;
     background-color: rgb(15, 15, 15);
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--default-text);
 }
 
+h1{
+    font-family: 'Barlow Condensed';
+    color: var(--main-color-light);
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size:2.5rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.separatorContainer{
+    display: flex;
+    gap:1rem;
+    width:80%;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2.5rem;
+    margin-bottom: -1.5rem;
+}
+
+.sep {
+    border: 0; 
+    height:2px;
+    background-color: var(--main-color);
+    width:100%;
+
+}
+
+.sepicon {
+    height:2rem;
+}
+
+
 .header {
-	background-color: var(--main-color);
+	background-color: var(--main-color-light);
 	position:sticky;
     z-index: 1;
 	top:0%;
     height:12vh;
     display:flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
+    padding: 0px 8rem 0px 8rem;
+}
+
+.logoMed{
+    height:10rem;
+    position:relative;
+    top:1.9rem;
 }
 
 .navbar {
 	display: flex;
 	margin:0;
-	color:white;
+	color:var(--default-text);
 	font-weight: 700;
 	justify-content: center;
     gap: 1rem;
-    margin: 0px 10vw 0px 10vw;
     flex-wrap: nowrap;
 }
 
 .navbar a {
     text-decoration: none;
-    color:white;
+    color:var(--default-text);
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
 }
 
-li {
+.navbar li {
 	padding: 0.5rem;
 	list-style-type: none;
 	font-size: 1.25rem;
     width:fit-content;
 }
 
+.navbar li div {
+    display:flex;
+}
+
+.navbar a:hover{
+    color:black;
+}
+
 .home {
     padding-top: 8vh;
-	padding-bottom: 150vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+}
+
+.serviceWrapper {
+    border-style: solid;
+    /* border-radius: 10px; */
+    border-color: rgba(185, 185, 185, 0.473);
+    margin-top: 50px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    color:var(--default-text);
+    width:960px;
+    padding:1rem;
 }
 
 .services {
     display:flex;
     flex-wrap: wrap;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: rgba(185, 185, 185, 0.473);
-    padding: 25px;
+    padding: 1rem;
     justify-content: center;
     gap:20px;
 }
 
 .services div {
-    font-size: 2rem;
-    color:white;
+    font-size: 1.5rem;
+    color:var(--default-text);
     flex: 0 0 calc((100% - 40px) / 3);
     border-top: 2px  solid var(--main-color-variant);
     border-bottom: 2px  solid var(--main-color-variant);
     padding: 12px 0px 12px 0px;
+    text-align: center;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    transition: transform 0.5s;
+}
+
+.services div:hover{
+    transform: scale(1.1);
+}
+
+.exp {
+    font-size: 1.2rem;
+    font-weight: 400;
+    width:70%;
     text-align: center;
 }
 
@@ -85,17 +173,94 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 2vh;
+    margin-top: 0;
     gap: 1rem;
-    color: white;
+    color: var(--default-text);
     font-size: 2rem;
 }
 
 .callButton {
-    font-size: 2.2rem;
-    font-weight: bold;
+    font-size: 1.8rem;
+    font-weight: 600;
     padding: .5rem 4rem;
     color:white;
-    background-color: var(--main-color);
+    background-color: var(--main-color-light);
     border:none;
+    background-image: linear-gradient(92.88deg, var(--main-color-light) 9.16%, var(--main-color) 43.89%, var(--main-color-variant) 64.72%);
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.callButton:hover{
+    cursor:pointer;
+    box-shadow: var(--main-color-variant) 0 1px 30px;
+    transition-duration: .1s;
+}
+
+.info {
+    display:flex;
+    flex-direction: column;
+    gap:1.2rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.logoSmall {
+    width: 10rem;
+}
+
+.infoBlock{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.footWrapper{
+    border-top: 2px solid var(--main-color);
+    width:70%;
+    padding: 1rem 0;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.galleryWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 16rem);
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding:2rem;
+    border-bottom: 2px solid var(--main-color);
+}
+
+.galleryItem {
+    aspect-ratio: 1/1;
+    width:100%;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    transition: transform 0.5s;
+}
+
+.galleryItem:hover {
+    transform: scale(1.1);
 }
