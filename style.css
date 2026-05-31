@@ -1,32 +1,101 @@
+:root {
+    --main-color: rgb(10, 37, 73);
+    --main-color-variant: rgba(0, 33, 77, 0.521);
+}
+
 body, html {
 	margin:0;
 	padding:0;
 	position:relative;
 	overflow: visible;
+    background-color: rgb(15, 15, 15);
 }
 
-.heading {
-	background-color: darkred;
+.header {
+	background-color: var(--main-color);
 	position:sticky;
+    z-index: 1;
 	top:0%;
+    height:12vh;
+    display:flex;
+    justify-content: right;
+    align-items: center;
 }
 
-.toolbar {
+.navbar {
 	display: flex;
-	flex-wrap: wrap;
 	margin:0;
 	color:white;
 	font-weight: 700;
 	justify-content: center;
-	z-index: 1;
+    gap: 1rem;
+    margin: 0px 10vw 0px 10vw;
+    flex-wrap: nowrap;
+}
+
+.navbar a {
+    text-decoration: none;
+    color:white;
 }
 
 li {
-	padding: 1%;
+	padding: 0.5rem;
 	list-style-type: none;
 	font-size: 1.25rem;
+    width:fit-content;
 }
 
 .home {
+    padding-top: 8vh;
 	padding-bottom: 150vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services {
+    display:flex;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(185, 185, 185, 0.473);
+    padding: 25px;
+    justify-content: center;
+    gap:20px;
+}
+
+.services div {
+    font-size: 2rem;
+    color:white;
+    flex: 0 0 calc((100% - 40px) / 3);
+    border-top: 2px  solid var(--main-color-variant);
+    border-bottom: 2px  solid var(--main-color-variant);
+    padding: 12px 0px 12px 0px;
+    text-align: center;
+}
+
+.spacer {
+    display: inline-block;
+    margin-top: 24px;
+}
+
+.callContainer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vh;
+    gap: 1rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.callButton {
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding: .5rem 4rem;
+    color:white;
+    background-color: var(--main-color);
+    border:none;
 }
