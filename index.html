@@ -17,15 +17,22 @@
               <img class="logoMed" src="./img/360_F_657370150_pdNeG5pjI976ZasVbKN9VqH1rfoykdYU.jpg" alt="Medium Logo" srcset="">
             </a>
           </div>
-          <nav class="container">
-            <ul class="navbar">
+          <ul id="sidebar" class="sidebar desktopHide">
               <li><a href="./index.html">Home</a></li>
               <li><a href="./gallery.html">Gallery</a></li>
               <li><a href="./contact.html">Contact</a></li>
+          </ul>
+          <nav class="container">
+            <ul class="navbar">
+              <li class="mobileHide"><a href="./index.html">Home</a></li>
+              <li class="mobileHide"><a href="./gallery.html">Gallery</a></li>
+              <li class="mobileHide"><a href="./contact.html">Contact</a></li>
               <li><div><a href="tel:+13322530409"><img class="telIcon" src="./img/phone.svg" alt="telephone" srcset="">332-253-0409</a></div></li>
+              <li class="mobileDisplay"><img onclick="hideMenu()" class="closeMenu" src="./img/bars-solid-full.svg" alt="Menu" ></li>
             </ul>
           </nav>
       </div>
+
       
       <div class="home">
         <img class="wordLogo" src="./img/KingDiving2.png" alt="">
