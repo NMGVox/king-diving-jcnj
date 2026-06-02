@@ -48,10 +48,12 @@
         </div>
         
         <div class="formWrapper">
-            <form action="" id="contact" class="contact">
-                <div class="inputWrapper">
-                    <input required type="text" name" id="name" placeholder="First and Last Name">
-                    <label for="name">Name</label>
+            <div id="error"></div>
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact" class="contact">
+              <input type="hidden" name="access_key" value="12eb215b-b8e8-4c38-a92f-7a5d6b0c4ef9">  
+              <div class="inputWrapper">
+                    <input required type="text" name="fullname" id="fullname" placeholder="FirstName LastName">
+                    <label for="fullname">Full Name</label>
                 </div>
                 <div class="inputWrapper">
                     <input required type="text" name="email" id="email" placeholder="example@example.com">
@@ -70,7 +72,7 @@
                     <label for="desc">Any known Problems and Concerns</label>
                 </div>
                 <div class="inputWrapper">
-                    <button class="subBtn">Submit</button>
+                    <button type="submit" class="subBtn">Submit</button>
                 </div>
             </form>
         </div>
@@ -113,5 +115,6 @@
       </footer>
     </main>
     <script src="index.js"></script>
+    <script src="hideMenu.js"></script>
   </body>
 </html>
