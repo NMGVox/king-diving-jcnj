@@ -12,3 +12,10 @@ function hideMenu(){
     return;
 
 }
+
+window.addEventListener('resize', (e) => {
+    const menu = document.querySelector(".sidebar");
+    if(window.innerWidth >1080 && menu.classList.contains('show')) {
+        hideMenu();
+    }
+});

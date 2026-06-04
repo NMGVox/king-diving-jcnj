@@ -116,6 +116,7 @@ h2 {
 
 .navbar li {
 	padding: 0.5rem;
+    font-size: clamp(.6rem, 5vw, 1.25rem);
 	list-style-type: none;
     width:fit-content;
 }
@@ -138,7 +139,7 @@ h2 {
 }
 
 .telIcon {
-    height:1.25rem;
+    width:clamp(.6rem, 5vw, 1.25rem);;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(139deg) brightness(106%) contrast(101%);
 }
 
@@ -535,7 +536,7 @@ textarea {
     }
 
     .services div:last-child{
-        border-bottom: 4px  solid var(--main-color-variant);
+        border-bottom: 4px  solid rgba(185, 185, 185, 0.473);
     }
 
     .callButton {
