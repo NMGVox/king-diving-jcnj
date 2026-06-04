@@ -17,9 +17,9 @@
 }
 
 :root {
-    --main-color: #bd1717;
-    --main-color-light: #dd1919;
-    --main-color-variant: rgba(134, 18, 18, 0.705);
+    --main-color: #162ba3;
+    --main-color-light: #1f39cc;
+    --main-color-variant: #11228375;
     --default-text:white;
     --invert-text:black;
 }
@@ -30,7 +30,7 @@ body, html {
 	position:relative;
 	overflow: visible;
     /* background-color: rgb(15, 15, 15); */
-    background-image: linear-gradient(180deg, rgb(5, 5, 5) 15%, rgb(26, 26, 26) 40%, rgb(5, 5, 5) 80%);
+    background-image: linear-gradient(180deg, rgb(243, 28, 28) 15%, rgb(243, 28, 28) 40%, rgb(243, 28, 28)  80%);
     font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--default-text);
 }
@@ -68,7 +68,7 @@ h2 {
 
 .sepicon {
     height:2rem;
-    filter: invert(12%) sepia(86%) saturate(5242%) hue-rotate(355deg) brightness(87%) contrast(93%);
+    filter: invert(8%) sepia(82%) saturate(5785%) hue-rotate(235deg) brightness(99%) contrast(90%);
 }
 
 
@@ -196,6 +196,7 @@ h2 {
 
 .wordLogo {
     width: clamp(320px, 50vw, 707px);
+    filter: invert(8%) sepia(82%) saturate(5785%) hue-rotate(235deg) brightness(99%) contrast(90%);
 }
 
 .serviceWrapper {
@@ -223,8 +224,8 @@ h2 {
 .services div {
     font-size: clamp(1rem, 1.5vw, 1.5rem);
     color:var(--default-text);
-    border-top: 4px  solid var(--main-color-variant);
-    border-bottom: 4px  solid var(--main-color-variant);
+    border-top: 4px  solid rgba(185, 185, 185, 0.473);
+    border-bottom: 4px  solid rgba(185, 185, 185, 0.473);
     padding: 1rem;
     text-align: center;
     -webkit-transition: transform 0.5s;
